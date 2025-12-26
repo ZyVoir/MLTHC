@@ -131,7 +131,8 @@ THC/
 │   │       ├── todos/     # Todo routes, handlers, schemas
 │   │       └── users/     # User routes, handlers, schemas
 │   ├── config/
-│   │   └── env.ts         # Environment configuration
+│   │   ├── env.ts         # Environment configuration
+│   │   └── vitest.ts      # Vitest Testing Configuration
 │   ├── constant/
 │   │   ├── api-tags.ts    # Swagger tags
 │   │   └── http-status.ts # HTTP status codes
