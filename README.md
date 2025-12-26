@@ -162,7 +162,7 @@ Once the server is running, visit:
 | GET    | `/v1/todos`     | Get all todos    |
 | GET    | `/v1/todos/:id` | Get todo by ID   |
 | POST   | `/v1/todos`     | Create new todo  |
-| PATCH  | `/v1/todos/:id` | Update todo      |
+| PUT    | `/v1/todos/:id` | Update todo      |
 | DELETE | `/v1/todos/:id` | Soft delete todo |
 
 ### Users
