@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { FastifyInstance } from 'fastify';
-import { buildApp } from '../../../../app.ts'; // Ensure the .ts extension is there for ESM
+import { buildApp } from '../../../../app.ts';
 import { HttpStatus } from '../../../../constant/http-status.ts';
 
 describe('Todo Routes - Sequential Lifecycle (POST -> GET -> DELETE)', () => {
@@ -29,7 +29,6 @@ describe('Todo Routes - Sequential Lifecycle (POST -> GET -> DELETE)', () => {
         expect(response.statusCode).toBe(HttpStatus.CREATED);
         expect(body).toHaveProperty('id');
 
-        // Save ID for the next tests
         createdTodoId = body.id;
     });
 
@@ -92,7 +91,7 @@ describe('Todo Routes - Resource Not Found (PUT/DELETE)', () => {
         const body = JSON.parse(response.payload);
 
         expect(response.statusCode).toBe(HttpStatus.NOT_FOUND);
-        // This verifies your TodoNotFoundResponse(id) helper is working
+
         expect(body.message).toBe(`Todo with ID ${NON_EXISTENT_ID} not found`);
     });
 
